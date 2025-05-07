@@ -2,6 +2,8 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
+
 
 namespace WinFormsApp1.Models;
 
@@ -15,7 +17,8 @@ public partial class Order
 
     public DateOnly OrderDate { get; set; }
 
-    public double Sum { get; set; }
+    public virtual double Sum { get; set; }
 
+    [NotMapped]
     public virtual Product Product { get; set; }
 }
