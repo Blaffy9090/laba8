@@ -24,30 +24,17 @@ namespace WinFormsApp1
                 orderGridView!.Columns["Id"]!.DisplayIndex = 0;
 
                 orderGridView!.Columns["Amount"]!.DisplayIndex = 3;
-                orderGridView!.Columns["Amount"]!.HeaderText = "Сумма";
+                orderGridView!.Columns["Amount"]!.HeaderText = "пїЅпїЅпїЅпїЅпїЅ";
 
                 orderGridView!.Columns["Date"]!.DisplayIndex = 2;
-                orderGridView!.Columns["Date"]!.HeaderText = "Дата";
+                orderGridView!.Columns["Date"]!.HeaderText = "пїЅпїЅпїЅпїЅ";
 
                 orderGridView!.Columns["Product"]!.DisplayIndex = 1;
-                orderGridView!.Columns["Product"]!.HeaderText = "Товар";
+                orderGridView!.Columns["Product"]!.HeaderText = "пїЅпїЅпїЅпїЅпїЅ";
 
                 orderGridView.Refresh();
             }
 
-            /*
-			    public int Id { get; set; }
-
-				public int? ProductId { get; set; }
-
-				public int Amount { get; set; }
-
-				public DateOnly OrderDate { get; set; }
-
-				public double Sum { get; set; }
-
-				public virtual Product Product { get; set; }
-			 */
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -80,4 +67,5 @@ namespace WinFormsApp1
             }
         }
     }
+
 }

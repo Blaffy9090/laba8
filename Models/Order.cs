@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 
+
 namespace WinFormsApp1.Models;
 
 public partial class Order
