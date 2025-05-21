@@ -57,9 +57,12 @@ namespace WinFormsApp1
         private void orderGridView_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
         {
             try {
-                orderGridView.CurrentCell = orderGridView.Rows[e.RowIndex].Cells[e.ColumnIndex];
-                orderGridView.Rows[e.RowIndex].Selected = true;
-                orderGridView.Focus();
+                if (e.Button == MouseButtons.Right)
+                {
+                    orderGridView.CurrentCell = orderGridView.Rows[e.RowIndex].Cells[e.ColumnIndex];
+                    orderGridView.Rows[e.RowIndex].Selected = true;
+                    orderGridView.Focus();
+                }
             }
             catch
             {
