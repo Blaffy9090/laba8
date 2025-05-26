@@ -12,15 +12,15 @@ using WinFormsApp1.Models;
 namespace WinFormsApp1.Migrations
 {
     [DbContext(typeof(lab8YazikiContext))]
-    [Migration("20250426111842_CreateDB")]
-    partial class CreateDB
+    [Migration("20250526213847_createdatabase")]
+    partial class createdatabase
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "9.0.4")
+                .HasAnnotation("ProductVersion", "9.0.5")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);

@@ -24,9 +24,9 @@ public partial class lab8YazikiContext : DbContext
     public virtual DbSet<Product> Products { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-
-    optionsBuilder.UseSqlServer("Data Source=B116-10\\SQLEXPRESS;Initial Catalog=abombus;Persist Security Info=True;User ID=sa;Password=MSSQL;Encrypt=False");
-
+    {
+        optionsBuilder.UseSqlServer("Data Source=DESKTOP-MT28NN3;Initial Catalog=newdb;Integrated Security=True;Encrypt=False");
+    }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
