@@ -12,8 +12,8 @@ using WinFormsApp1.Models;
 namespace WinFormsApp1.Migrations
 {
     [DbContext(typeof(lab8YazikiContext))]
-    [Migration("20250526213847_createdatabase")]
-    partial class createdatabase
+    [Migration("20250527115952_bd1")]
+    partial class bd1
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

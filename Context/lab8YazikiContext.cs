@@ -25,7 +25,7 @@ public partial class lab8YazikiContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
-        optionsBuilder.UseSqlServer("Data Source=DESKTOP-MT28NN3;Initial Catalog=newdb;Integrated Security=True;Encrypt=False");
+        optionsBuilder.UseSqlServer("Data Source=i-212-pc16\\SQLEXPRESS;Initial Catalog=ttesst;User ID=sa;Password=MSSQL;Encrypt=False");
     }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)

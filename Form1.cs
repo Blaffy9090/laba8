@@ -39,7 +39,7 @@ namespace WinFormsApp1
                 this.orderGridView!.Columns[5]!.HeaderText = "Продукт";
 
                 this.orderGridView!.Columns[1]!.DisplayIndex = 2;
-                this.orderGridView!.Columns[1]!.HeaderText = "ПродуктId";
+                this.orderGridView!.Columns[1]!.HeaderText = "ProductId";
 
                 this.orderGridView!.Columns[3]!.DisplayIndex = 3;
                 this.orderGridView!.Columns[3]!.HeaderText = "Дата";
@@ -98,7 +98,7 @@ namespace WinFormsApp1
 
         private void редактироватьToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            FormAddProduct frm = new FormAddProduct(2, Convert.ToInt32(this.orderGridView.SelectedRows[0].Cells["ProductId"].Value));
+            FormAddProduct frm = new FormAddProduct(2, Convert.ToInt32(this.orderGridView.SelectedRows[0].Cells[2].Value));
 
             frm.Owner = this;
             frm.Show();
@@ -114,7 +114,7 @@ namespace WinFormsApp1
 
         private void редактироватьToolStripMenuItem2_Click(object sender, EventArgs e)
         {
-            var id = Convert.ToInt32(this.orderGridView.SelectedRows[0].Cells["ProductId"].Value);
+            var id = Convert.ToInt32(this.orderGridView.SelectedRows[0].Cells[2].Value);
 
             using (lab8YazikiContext db = new lab8YazikiContext())
             {
@@ -122,7 +122,7 @@ namespace WinFormsApp1
 
                 if (prod != null)
                 {
-                    FormAddCategory frm = new FormAddCategory(2, prod.Category.Id);
+                    FormAddCategory frm = new FormAddCategory(2, (int)prod.CategoryId);
 
                     frm.Owner = this;
                     frm.Show();

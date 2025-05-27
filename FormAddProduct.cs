@@ -48,7 +48,13 @@ namespace WinFormsApp1
                         this.Name.Text = obj.Name;
                         this.Description.Text = obj.Description;
                         this.Price.Text = obj.Price.ToString();
-                        this.Category.Text = obj.Category.ToString();
+
+                        if (obj.Category == null)
+                        {
+                            obj.Category = db.Categories.FirstOrDefault(t => t.Id == obj.CategoryId);
+                        }
+
+                        this.Category.Text = obj?.Category.Name.ToString();
                     }
                 }
             }
